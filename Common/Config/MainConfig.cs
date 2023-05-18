@@ -12,7 +12,7 @@ namespace myhretro.Common.Config
 	{
 		public override ConfigScope Mode => ConfigScope.ClientSide;
 
-		[Header("[i:3514] [c/ffeb6e:Main]")]
+		[Header("[i:5061] [c/ffeb6e:Main]")]
 
 		[DefaultValue(true)]
 		[Label("Retro Effect")]
@@ -47,7 +47,7 @@ namespace myhretro.Common.Config
 		[Slider()]
 		public float DitherSpread { get; set; }
 
-		[Header("[i:3481] [c/ffeb6e:DEV]")]
+		[Header("[i:4818] [c/ffeb6e:Debug]")]
 
 		[DefaultValue(false)]
 		[Label("Debug")]

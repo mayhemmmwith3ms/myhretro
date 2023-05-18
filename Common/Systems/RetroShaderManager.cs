@@ -31,7 +31,7 @@ namespace myhretro.Common.Systems
 
 		public static float paletteFade = 0;
 
-		public override void PostUpdateInput()
+		public override void PreUpdateInvasions()
 		{
 			if (MConfig.DebugMode)
 			{
