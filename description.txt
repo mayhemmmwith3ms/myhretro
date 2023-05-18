@@ -1,2 +1,7 @@
 DISCLAIMER: This mod was not created with accessibility or visibilty in mind. The lowered colour depth can make distinguishing between certain objects difficult and sometimes impossible
 
+This is a small mod that adds a set of shaders and other visual tweaks to give the game a more retro-ish look reminiscent of older game consoles (probably i've never actually played a console with graphical limitations like this)
+Has a bunch of config options so you can tweak the effects to your liking.
+
+NOTE: Due to some issues I don't know the exact cause of, the dithering effect gets distorted a lot with certain display settings. Lowest zoom amount and disabling fullscreen fixed the issue for me, but you may have to try different settings until I find a proper fix for the issue.
+Also, disabling and re-enabling the effect mid-gameplay may cause shader ordering issues (namely with pillar shields and heat distortion) This can usually be fixed by reloading your world.
