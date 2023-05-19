@@ -8,7 +8,7 @@ using Terraria.ModLoader.Config;
 
 namespace myhretro.Common.Config
 {
-	public class MainConfig : ModConfig
+	public class RTConfig : ModConfig
 	{
 		public override ConfigScope Mode => ConfigScope.ClientSide;
 

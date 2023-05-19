@@ -16,7 +16,6 @@ namespace myhretro.Common.Systems
 	{
 		public override void Load()
 		{
-			//LoadScreenShader("PixelPerfect", "myhretro/Assets/Effects/PixelPerfectShader", "PixelPerfectShader", EffectPriority.VeryHigh);
 			LoadScreenShader("ColorReplace", "myhretro/Assets/Effects/ColorReplaceShader", "ColorReplace", EffectPriority.High);
 			LoadScreenShader("Dither", "myhretro/Assets/Effects/DitherShader", "DitherShader", EffectPriority.High);
 			LoadScreenShader("ColorCompress", "myhretro/Assets/Effects/ColorCompressShader", "ColorCompressShader", EffectPriority.High);

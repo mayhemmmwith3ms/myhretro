@@ -17,7 +17,7 @@ namespace myhretro.Common.Systems
 {
 	public class RetroShaderManager : ModSystem
 	{
-		static MainConfig MConfig => ModContent.GetInstance<MainConfig>();
+		static RTConfig MConfig => ModContent.GetInstance<RTConfig>();
 		static Player Plr => Main.player[Main.myPlayer];
 		public static bool EffectActive => (MConfig.DebugMode && debugEffectActive) || (!MConfig.DebugMode && MConfig.EffectActive);
 
@@ -84,7 +84,6 @@ namespace myhretro.Common.Systems
 					if (Plr.ZoneGranite) SetReplacePalette(28, 4);
 					if (Plr.ZoneMarble) SetReplacePalette(29, 4);
 
-					//Main.NewText(Main.SceneMetrics.ShimmerMonolithState);
 					bool moonLord = false;
 					for (int i = 0; i < Main.maxNPCs; i++)
 					{
@@ -118,7 +117,6 @@ namespace myhretro.Common.Systems
 				Texture2D fade = ModContent.Request<Texture2D>("myhretro/Assets/Textures/ReplacePalettes/replacePalette" + fadeReplacePalette).Value;
 
 				Filters.Scene["myh1bit:ColorReplace"].GetShader().UseImage(replace, 0, SamplerState.PointClamp);
-				//Filters.Scene["myh1bit:ColorReplace"].GetShader().UseImage(replace, 1, SamplerState.PointClamp);
 				if (MConfig.ColourFade)
 				{
 					Filters.Scene["myh1bit:ColorReplace"].GetShader().UseImage(fade, 1, SamplerState.PointClamp);
