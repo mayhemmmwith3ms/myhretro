@@ -52,16 +52,16 @@ namespace myhretro.Common.Systems
 
 			if (EffectActive && Plr.active)
 			{
-				if (MConfig.ForcePalette == 0 || MConfig.ForcePalette > 25)
+				if (MConfig.ForcePalette == 0 || MConfig.ForcePalette > 29)
 				{
 					if (Plr.ZonePurity) SetReplacePalette(1, 0);
-					if (Plr.ZoneDesert) SetReplacePalette(2, 2);
-					if (Plr.ZoneSnow) SetReplacePalette(3, 2);
+					if (Plr.ZoneDesert) SetReplacePalette(2, 3);
+					if (Plr.ZoneSnow) SetReplacePalette(3, 3);
 					if (Plr.ZoneCorrupt) SetReplacePalette(4, 10);
-					if (Plr.ZoneJungle) SetReplacePalette(5, 2);
+					if (Plr.ZoneJungle) SetReplacePalette(5, 3);
 					if (Plr.ZoneBeach) SetReplacePalette(6, 0);
 					if (Plr.ZonePurity && !Main.dayTime) SetReplacePalette(7, 1);
-					if (Plr.ZoneNormalUnderground || Plr.ZoneRockLayerHeight) SetReplacePalette(8, 1);
+					if (Plr.ZoneNormalUnderground || Plr.ZoneRockLayerHeight) SetReplacePalette(8, 2);
 					if (Plr.ZoneUnderworldHeight) SetReplacePalette(9, 100);
 					if (Plr.ZoneShimmer || Main.SceneMetrics.ShimmerMonolithState == 1) SetReplacePalette(10, 99);
 					if (Plr.ZoneCrimson) SetReplacePalette(11, 10);
@@ -78,13 +78,21 @@ namespace myhretro.Common.Systems
 					if (Plr.ZoneTowerStardust || Plr.stardustMonolithShader || Main.SceneMetrics.ActiveMonolithType == 2) SetReplacePalette(22, 101);
 					if (Plr.ZoneTowerVortex || Plr.vortexMonolithShader || Main.SceneMetrics.ActiveMonolithType == 0) SetReplacePalette(23, 101);
 					if (Main.eclipse) SetReplacePalette(24, 98);
+					if (Main.pumpkinMoon) SetReplacePalette(26, 99);
+					if (Main.snowMoon) SetReplacePalette(27, 99);
+					if (Plr.ZoneGraveyard) SetReplacePalette(8, 50);
+					if (Plr.ZoneGranite) SetReplacePalette(28, 4);
+					if (Plr.ZoneMarble) SetReplacePalette(29, 4);
 
 					//Main.NewText(Main.SceneMetrics.ShimmerMonolithState);
 					bool moonLord = false;
-					foreach (NPC n in Main.npc)
+					for (int i = 0; i < Main.maxNPCs; i++)
 					{
-						if (n.type == NPCID.MoonLordCore) moonLord = true;
-						break;
+						if (Main.npc[i].type == NPCID.MoonLordCore)
+						{
+							moonLord = true;
+							break;
+						}
 					}
 					if (moonLord || Plr.moonLordMonolithShader || Main.SceneMetrics.ActiveMonolithType == 4) SetReplacePalette(25, 200);
 				}
