@@ -1,0 +1,66 @@
+Mods: {
+	myhretro: {
+		Configs: {
+			RTConfig: {
+				DisplayName: Config
+
+				Headers: {
+					Main: "[i:5061][c/ffeb6e: Main]"
+					Debug: "[i:4818][c/ffeb6e: Debug]"
+				}
+
+				EffectActive: {
+					Label: Retro Effect
+					Tooltip: Toggles the retro effect in its entirety
+				}
+
+				ColourFade: {
+					Label: Fade Between Palettes
+					Tooltip: Makes the transition between different palettes less jarring by fading between them
+				}
+
+				OldDarkness: {
+					Label: Old Broken Formula
+					Tooltip:
+						'''
+						Uses the old (incorrect) colour compression formula because I thought it looked cool
+						Makes the game extremely dark
+						'''
+				}
+
+				ForcePalette: {
+					Label: Force Palette
+					Tooltip:
+						'''
+						Forces the effect to use a certain palette regardless of biome/events
+						Set to 0 to disable forcing a palette
+						'''
+				}
+
+				ColourDepth: {
+					Label: Colour Depth (WIP)
+					Tooltip:
+						'''
+						The number of different colours used for the effect
+						Currently does not work properly for more than 4 colours
+						'''
+				}
+
+				DitherSpread: {
+					Label: Dither Spread
+					Tooltip:
+						'''
+						The amount the dither spreads colours
+						Set to 0 to disable dithering
+						Values over (1.0 / ColourDepth) may cause the dither stages to overlap and look weird
+						'''
+				}
+
+				DebugMode: {
+					Label: Debug
+					Tooltip: Debug mode, intended for developers
+				}
+			}
+		}
+	}
+}
