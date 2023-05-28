@@ -1,5 +1,3 @@
-THIS MOD WAS MADE FOR THE TMODLOADER 1.4.4 BETA. IT WILL NOT FUNCTION IN THE STABLE BRANCH.
-
 DISCLAIMER: This mod was not created with accessibility or visibilty in mind. The lowered colour depth can make distinguishing between certain objects difficult and sometimes impossible
 
 This is a small mod that adds a set of shaders and other visual tweaks to give the game a more retro-ish look reminiscent of older game consoles (probably i've never actually played a console with graphical limitations like this)
